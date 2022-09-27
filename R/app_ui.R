@@ -14,8 +14,8 @@ app_ui <- function(request) {
       dashboardHeader(title = "Jane Eyre"),
       dashboardSidebar(
         sidebarMenu(
-          menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")) # ,
-          # menuItem("Widgets", tabName = "widgets", icon = icon("th"))
+          menuItem("Welcome", tabName = "dashboard", icon = icon("dashboard")),
+          menuItem("Soundtrack", tabName = "widgets", icon = icon("th"))
         )
       ),
       dashboardBody(
@@ -23,16 +23,13 @@ app_ui <- function(request) {
           # First tab content
           tabItem(
             tabName = "dashboard",
-            h2("Welcome"),
-            HTML('<div class="bg_heart">'),
-            tags$img(src = "www/jane_eyre.jpeg", height = 600, align = "middle"),
-            HTML("</div>")
-          ) # ,
+            mod_welcome_ui("welcome_1")
+          ),
 
           # Second tab content
-          # tabItem(tabName = "widgets",
-          #  h2("Widgets tab content")
-          # )
+          tabItem(tabName = "widgets",
+            mod_text_highlight_ui("text_highlight_1")
+          )
         )
       )
     )

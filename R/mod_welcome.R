@@ -10,7 +10,11 @@
 mod_welcome_ui <- function(id){
   ns <- NS(id)
   tagList(
- 
+
+    h2("A love story"),
+    HTML('<div class="bg_heart">'),
+    tags$img(src = "www/jane_eyre.jpeg", height = 600, align = "middle"),
+    HTML("</div>")
   )
 }
     
@@ -23,9 +27,3 @@ mod_welcome_server <- function(id){
  
   })
 }
-    
-## To be copied in the UI
-# 
-    
-## To be copied in the server
-# 
