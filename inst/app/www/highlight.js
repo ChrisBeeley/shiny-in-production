@@ -4,7 +4,8 @@ $( document ).ready(function() {
 // the DOM object of the context (where to search for matches)
 var markInstance = new Mark(document.querySelector(".context"));
 // Cache DOM elements
-var keywordInput = document.querySelector("input[name='keyword']");
+//var keywordInput = document.querySelector("input[name='keyword']");
+var keywordInput = document.querySelector("input[id='text_highlight_1-keyword']");
 var optionInputs = document.querySelectorAll("input[name='opt[]']");
 
 function performMark() {
