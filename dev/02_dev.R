@@ -23,7 +23,7 @@ usethis::use_package( "shinydashboard" )
 ## Add modules ----
 ## Create a module infrastructure in R/
 golem::add_module( name = "welcome" ) # Name of the module
-golem::add_module( name = "name_of_module2" ) # Name of the module
+golem::add_module( name = "text_highlight" ) # Name of the module
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
@@ -33,6 +33,8 @@ golem::add_utils( "helpers" )
 ## External resources
 ## Creates .js and .css files at inst/app/www
 golem::add_js_file( "heart" )
+golem::add_js_file( "play2" )
+golem::add_js_file( "highlight" )
 golem::add_js_handler( "handlers" )
 golem::add_css_file( "heart" )
 

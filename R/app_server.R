@@ -8,5 +8,7 @@ app_server <- function( input, output, session ) {
   # Your application server logic 
 
   mod_welcome_server("welcome_1")
+
+  mod_text_highlight_server("text_highlight_1")
   
 }
