@@ -4,44 +4,40 @@
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
 #'
-#' @noRd 
+#' @noRd
 #'
-#' @importFrom shiny NS tagList 
-mod_text_highlight_ui <- function(id){
+#' @importFrom shiny NS tagList
+mod_text_highlight_ui <- function(id) {
   ns <- NS(id)
   tagList(
-
     HTML('<script type="module" src="www/mark.js" ></script>'),
+    fluidRow(
+      column(3, HTML('<button id="btn" style="width:120px;height:90px;font-size: x-large">
+        Press me!<br>&#9835&#9835</button><br>')),
 
-        HTML('<button id="btn">Press me!</button>'),
-
-        HTML('<span>Type in a keyword:</span>'),
-
+      column(
+        9, HTML("<span>Type in a search term:</span>"),
         textInput(ns("keyword"), "Search term"),
 
-        #HTML('<input type="text" name="keyword" class="form-control input-sm" value="Jane">'),
-
         HTML('<div class="panel-body context">'),
-
         htmlOutput(ns("search_text")),
-        HTML('</div>')
- 
+        HTML("</div>")
+      )
+    )
   )
 }
-    
+
 #' text_highlight Server Functions
 #'
-#' @noRd 
-mod_text_highlight_server <- function(id){
-  moduleServer( id, function(input, output, session){
+#' @noRd
+mod_text_highlight_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
-    output$search_text = renderText({
-
-      search_results = jane_eyre[stringr::str_detect(jane_eyre, "love")]
+    output$search_text <- renderText({
+      search_results <- jane_eyre[stringr::str_detect(jane_eyre, "love")]
 
       paste("<p>", search_results, "</p>")
     })
- 
   })
 }
