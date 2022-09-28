@@ -11,7 +11,7 @@ mod_welcome_ui <- function(id){
   ns <- NS(id)
   tagList(
 
-    h2("A love story"),
+    h2("Love always"),
     HTML('<div class="bg_heart">'),
     tags$img(src = "www/jane_eyre.jpeg", height = 600, align = "middle"),
     HTML("</div>")

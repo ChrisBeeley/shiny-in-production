@@ -1,0 +1,13 @@
+name: shiny-in-production
+title: shiny-in-production
+username: chrisbeeley
+account: chrisbeeley
+server: involve.nottshc.nhs.uk
+hostUrl: https://involve.nottshc.nhs.uk/rsconnect/__api__
+appId: 140
+bundleId: 6965
+url: https://involve.nottshc.nhs.uk/rsconnect/content/d46a6e42-571f-4025-bd3c-ab1629d1ff5b/
+when: 1664360372.5264
+lastSyncTime: 1664360372.52642
+asMultiple: FALSE
+asStatic: FALSE

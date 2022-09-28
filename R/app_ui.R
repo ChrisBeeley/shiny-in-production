@@ -15,7 +15,7 @@ app_ui <- function(request) {
       dashboardSidebar(
         sidebarMenu(
           menuItem("Welcome", tabName = "dashboard", icon = icon("dashboard")),
-          menuItem("Soundtrack", tabName = "widgets", icon = icon("th"))
+          menuItem("Explore book", tabName = "widgets", icon = icon("th"))
         )
       ),
       dashboardBody(
